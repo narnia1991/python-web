@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+.navItem {
+  padding-right: 1rem;
+}
