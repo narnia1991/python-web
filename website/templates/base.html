@@ -20,9 +20,22 @@
       </div>
     </nav>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
-    messages%} {% for category, message in messages %}
-    <div class="alert">{{ message }}</div>
-    {% endfor %} {% endif %} {% endwith %}
+    messages%} {% for category, message in messages %} {% if category == "error"
+    %}
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      {{ message }}
+    </div>
+    {% elif category=="success" %}
+    <div class="alert success">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      {{ message }}
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
     <div class="container">{% block content %} {% endblock %}</div>
   </body>
 </html>
