@@ -12,6 +12,7 @@
   background-color: #f4433640; /* Red */
   color: white;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 .success {
   background-color: #43f43640; /* Red */
@@ -32,4 +33,37 @@
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: flex;
+}
+
+.note {
+  flex: 7;
+}
+
+.deleteNote {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteNote > button {
+  border-radius: 1rem;
+}
+
+.noteForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.noteSubmit {
+  width: fit-content;
+  align-self: flex-end;
 }
