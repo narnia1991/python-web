@@ -9,12 +9,14 @@
   </head>
   <body>
     <nav class="nav">
+      {% if not user.is_authenticated %}
       <div class="navItem">
         <a href="/login" id="login" class="current">Login</a>
       </div>
       <div class="navItem">
         <a href="/signup" id="signup">Sign Up</a>
       </div>
+      {% else %}
       <div class="navItem">
         <a href="/logout" id="logout">Logout</a>
       </div>
